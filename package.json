@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "detox": "^6.0.4",
+    "jest": "^22.0.4",
     "jest-expo": "23.0.0",
     "react-native-scripts": "1.8.1",
     "react-test-renderer": "16.0.0"
@@ -13,7 +15,9 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "test:e2e": "detox test -c ios.sim.debug",
+    "test:e2e:build": "detox build"
   },
   "jest": {
     "preset": "jest-expo"
@@ -22,15 +26,29 @@
     "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-react-native": "^3.2.0",
     "expo": "^23.0.4",
+    "jest-cli": "^22.0.4",
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-elements": "^0.18.5",
     "react-native-image-picker": "^0.26.7",
+    "react-native-permissions": "^1.0.6",
     "react-native-vector-icons": "^4.4.3",
     "react-redux": "^5.0.6"
   },
   "plugins": [
     "react",
     "react-native"
-  ]
+  ],
+  "detox": {
+    "test-runner": "jest",
+    "runner-config": "e2e/config.json",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ReactNativeTestApp.app",
+        "build": "xcodebuild -project ios/ReactNativeTestApp.xcodeproj -scheme ReactNativeTestApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
+  }
 }

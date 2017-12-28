@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 export default class MyHeader extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     let titleStyle = {
       fontSize: 40,
@@ -11,7 +15,9 @@ export default class MyHeader extends React.Component {
     };
 
     return (
-      <Text style={titleStyle}>{this.props.content}</Text>
+      <View testID={this.props.testID}>
+        <Text testID="myheadertext" style={titleStyle}>{this.props.content}</Text>
+      </View>
     );
   }
 }
