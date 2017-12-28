@@ -8,7 +8,9 @@ import ImagePicker from 'react-native-image-picker';
 export default class KittenComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {kittenSource: require('../../assets/kitten.jpg')};
+    this.state = {
+      kittenSource: require('../../assets/kitten.jpg')
+    };
   }
 
   componentDidMount() {
@@ -80,7 +82,7 @@ export default class KittenComponent extends React.Component {
       <View style={{flex: 1}}>
         <Image source={this.state.kittenSource} style={{width: '100%', flex: 2, height: 200}} />
         <View style={{flex: 1}}>
-          <FormLabel>KittenName</FormLabel>
+          <FormLabel>Kitten Name</FormLabel>
           <FormInput />
         </View>
         <View style={{bottom: 0, top: 0, position: 'relative', flex: 2}}>
@@ -93,7 +95,8 @@ export default class KittenComponent extends React.Component {
           <Card>
             <Button
               testID="saveKittenButton"
-              title="Save kitten" />
+              title="Save kitten"
+              onPress={() => {}} />
           </Card>
         </View>
       </View>
