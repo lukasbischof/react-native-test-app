@@ -13,7 +13,7 @@ react-native link
 ### Test
 Unit tests: `npm test`
 
-e2e tests: `detox tests`
+e2e tests: `detox test`
 
 ### Run
 Run `react-native run-ios`
