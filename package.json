@@ -4,6 +4,8 @@
   "private": true,
   "devDependencies": {
     "detox": "^6.0.4",
+    "eslint": "^4.14.0",
+    "eslint-plugin-react": "^7.5.1",
     "jest": "^22.0.4",
     "jest-expo": "23.0.0",
     "react-native-scripts": "1.8.1",
@@ -23,15 +25,16 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "eslint-plugin-react": "^7.5.1",
     "eslint-plugin-react-native": "^3.2.0",
     "expo": "^23.0.4",
     "jest-cli": "^22.0.4",
+    "jshint": "^2.9.5",
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-elements": "^0.18.5",
     "react-native-image-picker": "^0.26.7",
     "react-native-permissions": "^1.0.6",
+    "react-native-tableview": "^2.0.0",
     "react-native-vector-icons": "^4.4.3",
     "react-navigation": "^1.0.0-beta.22",
     "react-redux": "^5.0.6"

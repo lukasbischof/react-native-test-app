@@ -1,15 +1,38 @@
-import React, { Component } from 'react';
-import { TabNavigator } from 'react-navigation';
+import React from 'react';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import KittenComponent from './Components/KittenComponent';
 import SettingsComponent from './Components/SettingsComponent';
+import KittensListComponent, { KittenDetailComponent } from './Components/KittensListComponent';
 import { Icon } from 'react-native-elements';
 
-export const Router = new TabNavigator({
-  Kittens: {
+const KittensListRouter = new StackNavigator({
+  Root: {
+    screen: KittensListComponent,
+    navigationOptions: {
+      title: 'Kittens'
+    }
+  },
+  Details: {
+    screen: KittenDetailComponent,
+    navigationOptions: {
+      title: 'Details'
+    }
+  }
+});
+
+export const Router = new TabNavigator({ 
+  KittensList: {
+    screen: KittensListRouter,
+    navigationOptions: {
+      tabBarLabel: 'Kittens',
+      tabBarIcon: ({ tintColor }) => <Icon name="list" color={tintColor} />
+    }
+  }, 
+  Kitten: {
     screen: KittenComponent,
     navigationOptions: {
-        tabBarLabel: 'Kittens',
-        tabBarIcon: ({ tintColor }) => <Icon name="rowing" color={tintColor} />
+      tabBarLabel: 'My Kitten',
+      tabBarIcon: ({ tintColor }) => <Icon name="rowing" color={tintColor} />
     }
   },
   Settings: {
@@ -19,4 +42,18 @@ export const Router = new TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="settings" color={tintColor} />
     }
   }
+},
+{
+  tabBarOptions: {
+    initialRouteName: 'KittensList',
+    activeTintColor: '#0d0',
+    inactiveTintColor: '#cdcdcd',
+    swipeEnabled: true,
+    labelStyle: {
+      fontSize: 12,
+    },
+    style: {
+      backgroundColor: '#fff',
+    },
+  },
 });
