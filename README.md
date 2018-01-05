@@ -17,7 +17,7 @@ e2e tests: `detox tests`
 
 ### Run
 Run `react-native run-ios`
-or `react-native run-android` (currently not working)
+or `react-native run-android`
 
 ### Dependencies
 * detox (Setup with Jest)
