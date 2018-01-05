@@ -26,11 +26,8 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "appcenter": "^1.1.0",
-    "appcenter-analytics": "^1.1.0",
-    "appcenter-crashes": "^1.1.0",
     "eslint-plugin-react-native": "^3.2.0",
-    "expo": "^23.0.4",
+    "expo": "^24.0.2",
     "jest-cli": "^22.0.4",
     "jshint": "^2.9.5",
     "react": "16.0.0",
