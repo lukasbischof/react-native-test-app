@@ -21,13 +21,6 @@ const KittensListRouter = new StackNavigator({
 });
 
 export const Router = new TabNavigator({ 
-  KittensList: {
-    screen: KittensListRouter,
-    navigationOptions: {
-      tabBarLabel: 'Kittens',
-      tabBarIcon: ({ tintColor }) => <Icon name="list" color={tintColor} />
-    }
-  }, 
   Kitten: {
     screen: KittenComponent,
     navigationOptions: {
@@ -35,6 +28,16 @@ export const Router = new TabNavigator({
       tabBarIcon: ({ tintColor }) => <Icon name="rowing" color={tintColor} />
     }
   },
+  KittensList: {
+    screen: KittensListRouter,
+    navigationOptions: {
+      tabBarLabel: 'Kittens',
+      tabBarIcon: ({ tintColor }) => <Icon name="list" color={tintColor} />,
+      tabBarTestIDProps: {
+        testID: 'kittensListTestId',
+      }
+    }
+  }, 
   Settings: {
     screen: SettingsComponent,
     navigationOptions: {

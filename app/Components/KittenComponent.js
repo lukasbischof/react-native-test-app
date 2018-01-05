@@ -83,7 +83,7 @@ export default class KittenComponent extends React.Component {
         <Image source={this.state.kittenSource} style={{width: '100%', flex: 2, height: 200}} />
         <View style={{flex: 1}}>
           <FormLabel>Kitten Name</FormLabel>
-          <FormInput />
+          <FormInput testID="kittenInputField" />
         </View>
         <View style={{bottom: 0, top: 0, position: 'relative', flex: 2}}>
           <Card>
