@@ -1,18 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<Text
-  accessible={true}
-  allowFontScaling={true}
-  ellipsizeMode="tail"
-  style={
-    Object {
-      "fontSize": 40,
-      "marginTop": 20,
-      "textAlign": "center",
-    }
-  }
+<View
+  testID={undefined}
 >
-  Hello
-</Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 40,
+        "marginBottom": 20,
+        "marginTop": 20,
+        "textAlign": "center",
+      }
+    }
+    testID="myheadertext"
+  >
+    Hello
+  </Text>
+</View>
 `;

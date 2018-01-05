@@ -18,6 +18,7 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js --watch",
+    "test:nowatch": "node node_modules/jest/bin/jest.js __tests__",
     "test:e2e": "detox test -c ios.sim.debug",
     "test:e2e:build": "detox build"
   },
@@ -25,6 +26,9 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "appcenter": "^1.1.0",
+    "appcenter-analytics": "^1.1.0",
+    "appcenter-crashes": "^1.1.0",
     "eslint-plugin-react-native": "^3.2.0",
     "expo": "^23.0.4",
     "jest-cli": "^22.0.4",
