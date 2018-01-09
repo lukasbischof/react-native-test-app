@@ -1,4 +1,6 @@
-# ReactNativeTestApp [![Build Status](https://www.bitrise.io/app/5c086e28096df898/status.svg?token=g3BXbq0OWxPr9uJGDnwHLA&branch=master)](https://www.bitrise.io/app/5c086e28096df898)
+# ReactNativeTestApp
+## CI
+[![Build Status](https://www.bitrise.io/app/5c086e28096df898/status.svg?token=g3BXbq0OWxPr9uJGDnwHLA&branch=master)](https://www.bitrise.io/app/5c086e28096df898)
 ## A Kitten Explorer
 ### Setup
 Run
