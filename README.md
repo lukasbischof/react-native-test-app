@@ -1,4 +1,4 @@
-# ReactNativeTestApp
+# ReactNativeTestApp [![Build Status](https://www.bitrise.io/app/5c086e28096df898/status.svg?token=g3BXbq0OWxPr9uJGDnwHLA&branch=master)](https://www.bitrise.io/app/5c086e28096df898)
 ## A Kitten Explorer
 ### Setup
 Run
@@ -26,4 +26,4 @@ or `react-native run-android`
 * react-native-elements
 * react-native-image-picker
 * react-native-permissions
-* react-navigation 
+* react-navigation
