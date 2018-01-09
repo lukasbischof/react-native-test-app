@@ -1,0 +1,47 @@
+{
+  "name": "ReactNativeTestApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "node node_modules/jest/bin/jest.js --watchAll"
+  },
+  "dependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "react-native-elements": "^0.18.5",
+    "react-native-image-picker": "^0.26.7",
+    "react-native-permissions": "^1.0.6",
+    "react-native-tableview": "^2.0.1",
+    "react-native-vector-icons": "^4.4.3",
+    "react-navigation": "^1.0.0-beta.23"
+  },
+  "devDependencies": {
+    "babel-jest": "22.0.4",
+    "babel-preset-react-native": "4.0.0",
+    "detox": "^6.0.4",
+    "jest": "^22.0.4",
+    "react-test-renderer": "16.0.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "detox": {
+    "test-runner": "jest",
+    "runner-config": "e2e/config.json",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ReactNativeTestApp.app",
+        "build": "xcodebuild -project ios/ReactNativeTestApp.xcodeproj -scheme ReactNativeTestApp -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      },
+      "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/ReactNativeTestApp.app",
+        "build": "export RCT_NO_LAUNCH_PACKAGER=true && xcodebuild -project ios/ReactNativeTestApp.xcodeproj -scheme ReactNativeTestApp-Release -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -quiet",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    }
+  }
+}
